@@ -1,4 +1,4 @@
-package top.kevinliaodev.clocation.bean;
+package top.madev.clocationlib.bean;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -6,8 +6,8 @@ import org.json.JSONObject;
 
 import java.util.List;
 
-import top.kevinliaodev.clocation.bean.GoogleCellTower;
-import top.kevinliaodev.clocation.bean.GoogleWifiInfo;
+import top.madev.clocationlib.bean.GoogleCellTower;
+import top.madev.clocationlib.bean.GoogleWifiInfo;
 
 /**
  * Created by lk on 2017/2/27.

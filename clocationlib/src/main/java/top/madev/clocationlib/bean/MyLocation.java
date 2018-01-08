@@ -1,4 +1,4 @@
-package top.kevinliaodev.clocation.bean;
+package top.madev.clocationlib.bean;
 
 /**
  * Created by Lk on 2016/12/14.

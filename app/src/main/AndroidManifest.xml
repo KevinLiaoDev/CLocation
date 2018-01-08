@@ -17,7 +17,6 @@
         <meta-data
             android:name="GOOGLE_LOCATION_API_KEY"
             android:value="YOUR_API_KEY" />
-
         <activity android:name=".demo.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

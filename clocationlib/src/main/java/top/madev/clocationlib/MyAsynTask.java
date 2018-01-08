@@ -1,4 +1,4 @@
-package top.kevinliaodev.clocation;
+package top.madev.clocationlib;
 
 import android.os.AsyncTask;
 import android.os.Build;

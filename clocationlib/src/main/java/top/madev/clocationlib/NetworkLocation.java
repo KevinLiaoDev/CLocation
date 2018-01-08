@@ -1,4 +1,4 @@
-package top.kevinliaodev.clocation;
+package top.madev.clocationlib;
 
 import android.app.Application;
 import android.content.Context;
@@ -18,8 +18,8 @@ import cn.finalteam.okhttpfinal.HttpRequest;
 import cn.finalteam.okhttpfinal.OkHttpFinal;
 import cn.finalteam.okhttpfinal.OkHttpFinalConfiguration;
 import cn.finalteam.okhttpfinal.RequestParams;
-import top.kevinliaodev.clocation.bean.GeoLocation;
-import top.kevinliaodev.clocation.bean.LocationInfo;
+import top.madev.clocationlib.bean.GeoLocation;
+import top.madev.clocationlib.bean.LocationInfo;
 
 /**
  * Created by lk on 2017/2/27.

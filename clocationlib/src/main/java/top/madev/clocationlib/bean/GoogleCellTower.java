@@ -1,4 +1,4 @@
-package top.kevinliaodev.clocation.bean;
+package top.madev.clocationlib.bean;
 
 import org.json.JSONException;
 import org.json.JSONObject;

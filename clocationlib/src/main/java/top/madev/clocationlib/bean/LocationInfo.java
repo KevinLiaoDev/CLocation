@@ -1,4 +1,4 @@
-package top.kevinliaodev.clocation.bean;
+package top.madev.clocationlib.bean;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
@@ -26,7 +26,7 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.List;
 
-import top.kevinliaodev.clocation.utils.ScanWifi;
+import top.madev.clocationlib.utils.ScanWifi;
 
 /**
  * Created by lk on 2017/2/27.

@@ -1,6 +1,6 @@
-package top.kevinliaodev.clocation.utils;
+package top.madev.clocationlib.utils;
 
-import top.kevinliaodev.clocation.bean.MyLocation;
+import top.madev.clocationlib.bean.MyLocation;
 
 /**
  * Created by lk on 2017/2/28.

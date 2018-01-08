@@ -8,12 +8,12 @@ import android.widget.TextView;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import top.kevinliaodev.clocation.GetLocation;
 import top.kevinliaodev.clocation.R;
-import top.kevinliaodev.clocation.bean.MyLocation;
-import top.kevinliaodev.clocation.bean.Point;
-import top.kevinliaodev.clocation.utils.BoundaryCheck;
-import top.kevinliaodev.clocation.utils.CoordinateConversion;
+import top.madev.clocationlib.GetLocation;
+import top.madev.clocationlib.bean.MyLocation;
+import top.madev.clocationlib.bean.Point;
+import top.madev.clocationlib.utils.BoundaryCheck;
+import top.madev.clocationlib.utils.CoordinateConversion;
 
 public class GPSLocationActivity extends AppCompatActivity {
 

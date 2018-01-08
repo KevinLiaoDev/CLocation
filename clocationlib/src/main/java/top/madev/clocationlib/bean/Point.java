@@ -1,4 +1,4 @@
-package top.kevinliaodev.clocation.bean;
+package top.madev.clocationlib.bean;
 
 public class Point {
     private double lat;// 纬度

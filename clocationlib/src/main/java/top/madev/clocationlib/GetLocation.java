@@ -1,4 +1,4 @@
-package top.kevinliaodev.clocation;
+package top.madev.clocationlib;
 
 import android.Manifest;
 import android.app.Activity;

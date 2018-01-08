@@ -1,4 +1,4 @@
-package top.kevinliaodev.clocation.utils;
+package top.madev.clocationlib.utils;
 
 public class GetDistance {
     /**
