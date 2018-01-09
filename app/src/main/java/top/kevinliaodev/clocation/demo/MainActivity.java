@@ -8,8 +8,10 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.TextView;
 
 import top.kevinliaodev.clocation.R;
+import top.madev.clocationlib.NetworkLocation;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,6 +39,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, GPSLocationActivity.class));
             }
         });
+        TextView tv_warning = findViewById(R.id.tv_warning);
+
+        if (NetworkLocation.getMainKey(this).equals("YOUR_API_KEY")){
+            tv_warning.setVisibility(View.VISIBLE);
+            tv_warning.setText("请填写GOOGLE_LOCATION_API_KEY!");
+        }
 
     }
 

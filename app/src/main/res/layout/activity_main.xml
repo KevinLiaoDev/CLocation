@@ -8,6 +8,13 @@
     android:gravity="center_horizontal">
 
     <TextView
+        android:id="@+id/tv_warning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ff0000"
+        android:visibility="gone"/>
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="友情提醒!\n1.网络定位数据来自谷歌，因此需要科学上网！\n2.GPS定位需要在室外能搜索到GPS信号的地方使用！\n3.请给予定位所需所有权限！"/>
