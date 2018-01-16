@@ -46,6 +46,7 @@ public class NetworkLocationActivity extends AppCompatActivity {
             public void onNetworkLocation(double latitude, double longitude, long updateTime, float accuracy) {
                 Double lat, lon;
                 MyLocation myLocation = new MyLocation(latitude, longitude);
+                //由于坐标系差异，中国大陆坐标需要转换
                 if(BoundaryCheck.getInstance().IsInsideChina(myLocation)) {
                     Point point = CoordinateConversion.wgs_gcj_encrypts(latitude, longitude);
                     lat = point.getLat();

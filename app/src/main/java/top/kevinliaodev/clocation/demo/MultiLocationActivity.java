@@ -45,6 +45,7 @@ public class MultiLocationActivity extends AppCompatActivity {
             public void onMultiLocation(double multilatitude, double multilongitude, long multiupdateTime, float multiaccuracy, float multibearing) {
                 Double latitude, longitude;
                 MyLocation myLocation = new MyLocation(multilatitude, multilongitude);
+                //由于坐标系差异，中国大陆坐标需要转换
                 if(BoundaryCheck.getInstance().IsInsideChina(myLocation)) {
                     Point point = CoordinateConversion.wgs_gcj_encrypts(multilatitude, multilongitude);
                     latitude = point.getLat();

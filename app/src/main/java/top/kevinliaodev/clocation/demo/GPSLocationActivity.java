@@ -40,6 +40,7 @@ public class GPSLocationActivity extends AppCompatActivity {
             public void onGPSLocation(double latitude, double longitude, long updateTime, float accuracy, float bearing) {
                 Double lat, lon;
                 MyLocation myLocation = new MyLocation(latitude, longitude);
+                //由于坐标系差异，中国大陆坐标需要转换
                 if(BoundaryCheck.getInstance().IsInsideChina(myLocation)) {
                     Point point = CoordinateConversion.wgs_gcj_encrypts(latitude, longitude);
                     lat = point.getLat();
