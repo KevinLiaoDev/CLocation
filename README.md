@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/License%20-Apache%202-337ab7.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
 ## 简介
-* 相信很多人Android开发人员都有这样的痛点，当国内Android用户在国外要使用地图时，好像十分尴尬，没有非常成熟的地图解决方案。
+* 相信很多Android开发人员都有这样的痛点，当国内Android用户在国外要使用地图时，好像十分尴尬，没有非常成熟的地图解决方案。
 * 由于众所周知的原因，谷歌的很多优秀服务在国内无法使用，其中国行手机由于阉割无法使用谷歌地图服务是一个非常让人头痛的问题。主要问题有：
   - 一方面，国内地图服务提供商（百度地图、高德地图、腾讯地图）在境外的地图资源少得可怜。
   - 另一方面，国行安卓手机由于系统缺少谷歌三大件，使得国行手机使用谷歌地图服务几乎变得不可能。
@@ -27,7 +27,14 @@
     android:name="GOOGLE_LOCATION_API_KEY"
     android:value="YOUR_API_KEY" />
 ```
-### 使用多重定位
+### 切换定位域名（非必须）
+```java
+GetLocation.getInstance().setNetworkLocationUrl("https://googleapis.xxxxxx.com/");
+```
+* 虽然该方案最主要的目标用户是在境外的国行手机，那么访问谷歌接口理应没有太大问题，但是不排除调试或者部分人需要在国内使用，特意封装了修改定位域名的方法。
+  - 如果你想在中国境内使用本方案中的网络定位，可在境外服务器反向代理如下接口：https://www.googleapis.com/geolocation/v1/geolocate?key=YOUR_API_KEY
+  - 也可以根据使用场景接入国内定位服务，在境外时使用CLocation，在境内时使用国内定位服务。
+### 使用多重定位（需访问谷歌服务器，大陆设备需翻墙）
 ```java
 GetLocation.getInstance().setMultiLocationListener(new GetLocation.OnMultiLocationListener() {
     @Override
@@ -54,7 +61,7 @@ GetLocation.getInstance().setMultiLocationListener(new GetLocation.OnMultiLocati
 GetLocation.getInstance().startMultiLocation(getApplication(), this, false);
 ```
 
-### 使用网络定位
+### 使用网络定位（需访问谷歌服务器，大陆设备需翻墙）
 ```java
 GetLocation.getInstance().setNetworkLocationListener(new GetLocation.OnNetworkLocationListener() {
     @Override
@@ -80,7 +87,7 @@ GetLocation.getInstance().setNetworkLocationListener(new GetLocation.OnNetworkLo
 });
 GetLocation.getInstance().startNetworkLocation(getApplication());
 ```
-### 使用GPS定位
+### 使用GPS定位(需要在室外能搜索到GPS信号的地方使用)
 ```java
 GetLocation.getInstance().setGPSLocationListener(new GetLocation.OnGPSLocationListener() {
     @Override
@@ -105,4 +112,13 @@ GetLocation.getInstance().setGPSLocationListener(new GetLocation.OnGPSLocationLi
     }
 });
 GetLocation.getInstance().startGPSLocation(getApplication(),this);
+```
+### 释放资源
+无论哪种的定位方式，在activity生命周期stop中一定要释放资源并且停止定位，以防资源浪费和异常奔溃
+```java
+@Override
+protected void onStop() {
+    super.onStop();
+    GetLocation.getInstance().onStop();
+}
 ```
