@@ -28,6 +28,8 @@
     android:name="GOOGLE_LOCATION_API_KEY"
     android:value="YOUR_API_KEY" />
 ```
+
+## 使用过程
 ### 切换定位域名（非必须）
 ```java
 GetLocation.getInstance().setNetworkLocationUrl("https://googleapis.xxxxxx.com/");
@@ -123,6 +125,6 @@ protected void onStop() {
     GetLocation.getInstance().onStop();
 }
 ```
-### 关于
+## 关于
 * 有任何建议或者使用中遇到问题都可以给我发邮件
 * Email：kevinliaodev@163.com
