@@ -33,6 +33,7 @@ GetLocation.getInstance().setNetworkLocationUrl("https://googleapis.xxxxxx.com/"
 ```
 * 虽然该方案最主要的目标用户是在境外的国行手机，那么访问谷歌接口理应没有太大问题，但是不排除调试或者部分人需要在国内使用，特意封装了修改定位域名的方法。
   - 如果你想在中国境内使用本方案中的网络定位，可在境外服务器反向代理如下接口：https://www.googleapis.com/geolocation/v1/geolocate?key=YOUR_API_KEY
+  - 提供个人反代域名https://googleapis.madev.top/
   - 也可根据使用场景接入国内定位服务，在境外时使用CLocation，在境内时使用国内定位服务。
 ### 使用多重定位（需访问谷歌服务器，境内网络需翻墙）
 ```java
@@ -50,6 +51,7 @@ GetLocation.getInstance().setMultiLocationListener(new GetLocation.OnMultiLocati
             latitude = multilatitude;
             longitude = multilongitude;
         }
+        //注意：google网络定位坐标系为WGS84
         //经度:longitude，纬度:latitude，精度:multiaccuracy，方位：multiaccuracy，更新时间：multiupdateTime
     }
 
@@ -77,6 +79,7 @@ GetLocation.getInstance().setNetworkLocationListener(new GetLocation.OnNetworkLo
             lat = latitude;
             lon = longitude;
         }
+        //注意：google网络定位坐标系为WGS84
         //经度:longitude，纬度:latitude，精度:accuracy，更新时间：updateTime
     }
 
