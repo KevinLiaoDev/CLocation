@@ -2,12 +2,13 @@
 
 [![License](https://img.shields.io/badge/License%20-Apache%202-337ab7.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
+* 国行安卓手机Google地图服务解决方案---[CMaps](https://github.com/KevinLiaoDev/CMaps)
 ## 简介
 * 相信很多Android开发人员都有这样的痛点，当国内Android用户在国外要使用地图时，好像十分尴尬，没有非常成熟的地图解决方案。
 * 由于众所周知的原因，谷歌的很多优秀服务在国内无法使用，其中国行手机由于阉割无法使用谷歌地图服务是一个非常让人头痛的问题。主要问题有：
   - 一方面，国内地图服务提供商（百度地图、高德地图、腾讯地图）在境外的地图资源少得可怜。
   - 另一方面，国行安卓手机由于系统缺少谷歌三大件，使得国行手机使用谷歌地图服务几乎变得不可能。
-* 本项目就是为了解决该问题而建立，围绕Google给出的API接口资源，通过一系列技术方案，使得国行手机在没有谷歌三大件的情况下也可以使用谷歌的地图服务。主要特征有：
+* 本项目是为了解决**地图定位**建立，围绕Google给出的API接口资源，通过一系列技术方案，使得国行手机在没有谷歌三大件的情况下也可以使用谷歌的地图服务。主要特征有：
   - 包含WIFI信号、基站和GPS的多重定位方案，具有定位误差小、适用性广、低消耗、速度快等特点。
   - 基于谷歌数据的定位，在国外实地测试定位准确率要明显高于国内定位服务。
   - 封装后的库体积小、逻辑清晰、使用简单，项目内还有多种相关实用工具可供使用。
@@ -27,6 +28,8 @@
     android:name="GOOGLE_LOCATION_API_KEY"
     android:value="YOUR_API_KEY" />
 ```
+
+## 使用过程
 ### 切换定位域名（非必须）
 ```java
 GetLocation.getInstance().setNetworkLocationUrl("https://googleapis.xxxxxx.com/");
@@ -125,6 +128,6 @@ protected void onStop() {
     GetLocation.getInstance().onStop();
 }
 ```
-### 关于
+## 关于
 * 有任何建议或者使用中遇到问题都可以给我发邮件
 * Email：kevinliaodev@163.com
