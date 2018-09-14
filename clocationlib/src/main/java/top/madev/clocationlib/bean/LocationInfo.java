@@ -421,7 +421,8 @@ public class LocationInfo {
             if(result == null)
                 continue;
             ScanWifi scanWIFI = new ScanWifi(result);
-            lsAllWIFI.add(scanWIFI);//防止重复
+            if(scanWIFI.channel != -1) //去除信道无法识别的wifi
+                lsAllWIFI.add(scanWIFI);//防止重复
         }
         ArrayList<GoogleWifiInfo> wifiInfos = new ArrayList<>(lsAllWIFI.size());
         for (ScanWifi w:lsAllWIFI){

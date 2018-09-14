@@ -123,14 +123,53 @@ public class ScanWifi implements Comparable<ScanWifi> {
             case 2484:
                 channel = 14;
                 break;
+            case 5180:
+                channel = 36;
+                break;
+            case 5200:
+                channel = 40;
+                break;
+            case 5210:
+                channel = 42;
+                break;
+            case 5220:
+                channel = 44;
+                break;
+            case 5240:
+                channel = 48;
+                break;
+            case 5250:
+                channel = 50;
+                break;
+            case 5260:
+                channel = 52;
+                break;
+            case 5280:
+                channel = 56;
+                break;
+            case 5290:
+                channel = 58;
+                break;
+            case 5300:
+                channel = 60;
+                break;
+            case 5320:
+                channel = 64;
+                break;
             case 5745:
                 channel = 149;
+                break;
+            case 5760:
+                channel = 152;
                 break;
             case 5765:
                 channel = 153;
                 break;
             case 5785:
                 channel = 157;
+                break;
+            case 5800:
+                channel = 160;
                 break;
             case 5805:
                 channel = 161;

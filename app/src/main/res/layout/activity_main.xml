@@ -42,6 +42,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="特别提示：\n1.如果你没有Google Location API_KEY，请前往\nhttps://console.developers.google.com/apis/dashboard\n2.如果你想在中国境内使用本方案中的网络定位，可在境外服务器反向代理如下接口\nhttps://www.googleapis.com/geolocation/v1/geolocate?key=YOUR_API_KEY\n3.以上两点有疑问，可以查看项目介绍文档"/>
+        android:text="特别提示：\n1.如果你没有Google Location API_KEY，请前往\nhttps://console.developers.google.com/apis/dashboard\n2.如果你想在中国境内使用本方案中的网络定位，可在境外服务器反向代理如下接口\nhttps://www.googleapis.com/geolocation/v1/geolocate?key=YOUR_API_KEY\n3.以上两点有疑问，可以查看项目介绍文档\nhttps://github.com/KevinLiaoDev/CLocation"/>
 
 </LinearLayout>
